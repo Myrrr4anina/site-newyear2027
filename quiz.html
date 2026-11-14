@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QUIZ — CYBER GOAT 2027</title>
+
+    <!-- Подключаем общие стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Новогодний снегопад -->
+<div class="snowfall" aria-hidden="true"></div>
+
+    <div class="site-wrapper">
+
+        <!-- Шапка сайта -->
+        <header class="header">
+
+            <a href="index.html" class="logo">
+                CYBER GOAT <span>2027</span>
+            </a>
+
+            <nav class="navigation">
+                <a href="index.html">ГЛАВНАЯ</a>
+                <a href="game.html">ИГРЫ</a>
+                <a href="quiz.html" class="active">ВИКТОРИНА</a>
+            </nav>
+
+            <div class="system-status">
+                ● SYSTEM ONLINE
+            </div>
+
+        </header>
+
+        <main>
+
+            <!-- Заголовок страницы -->
+            <section class="page-heading">
+
+                <p class="section-label">
+                    [ KNOWLEDGE TEST ]
+                </p>
+
+                <h1>NEW YEAR <span>QUIZ</span></h1>
+
+                <p>
+                    Проверьте свои знания и получите новогодний титул!
+                </p>
+
+            </section>
+
+            <!-- Основная викторина -->
+            <section class="game-section quiz-section">
+
+                <div class="game-heading">
+
+                    <span class="module-code">MODULE_03</span>
+
+                    <h2>НОВОГОДНИЙ <span>ЭКЗАМЕН</span></h2>
+
+                    <p>
+                        Всего пять вопросов. Сможете ответить на все?
+                    </p>
+
+                </div>
+
+                <!-- Игровая область -->
+                <div id="quiz-container">
+
+                    <p id="quiz-progress">
+                        Вопрос 1 / 5
+                    </p>
+
+                    <h3 id="question">
+                        Загрузка вопроса...
+                    </h3>
+
+                    <!-- Здесь появляются варианты ответов -->
+                    <div id="answers"></div>
+
+                    <!-- Сообщение о правильности ответа -->
+                    <p id="quiz-message"></p>
+
+                    <button
+                        class="game-button"
+                        id="next-question"
+                        disabled
+                    >
+                        СЛЕДУЮЩИЙ ВОПРОС
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- Секретное предсказание -->
+            <section class="prediction-section" id="prediction-section" hidden>
+
+                <div class="section-divider">
+                    <span>✦ ✦ ✦</span>
+                </div>
+
+                <div class="game-heading">
+
+                    <span class="module-code">SECRET_MODULE_04</span>
+
+                    <h2>FIRE <span>GOAT</span></h2>
+
+                    <p>
+                        Вы добрались до секретного модуля.
+                        Огненная Коза готова открыть Вам будущее!
+                    </p>
+
+                </div>
+
+                <!-- Экран предсказания -->
+                <div class="prediction-screen" id="prediction-screen">
+
+                    <div class="goat-symbol">
+                        🐐
+                    </div>
+
+                    <p id="prediction-status">
+                        SECRET CONNECTION ESTABLISHED
+                    </p>
+
+                    <h3 id="prediction-result">
+                        ВАШЕ ПРЕДСКАЗАНИЕ ОЖИДАЕТ ВАС...
+                    </h3>
+
+                </div>
+
+                <button class="game-button" id="get-prediction">
+                    ПОЛУЧИТЬ ПРЕДСКАЗАНИЕ
+                </button>
+
+            </section>
+
+        </main>
+
+        <!-- Подвал -->
+        <footer class="footer">
+            <p>CYBER GOAT 2027 © ALL RIGHTS RESERVED</p>
+            <p>POWERED BY FIRE AND NEW YEAR MAGIC</p>
+        </footer>
+
+    </div>
+
+    <!-- Подключаем JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

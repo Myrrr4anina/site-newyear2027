@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GAMES — CYBER GOAT 2027</title>
+
+    <!-- Подключаем общие стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Новогодний снегопад -->
+<div class="snowfall" aria-hidden="true"></div>
+
+    <div class="site-wrapper">
+
+        <!-- Шапка сайта -->
+        <header class="header">
+
+            <a href="index.html" class="logo">
+                CYBER GOAT <span>2027</span>
+            </a>
+
+            <nav class="navigation">
+                <a href="index.html">ГЛАВНАЯ</a>
+                <a href="game.html" class="active">ИГРЫ</a>
+                <a href="quiz.html">ВИКТОРИНА</a>
+            </nav>
+
+            <div class="system-status">
+                ● SYSTEM ONLINE
+            </div>
+
+        </header>
+
+        <main>
+
+            <!-- Заголовок страницы -->
+            <section class="page-heading">
+
+                <p class="section-label">
+                    [ ENTERTAINMENT MODULE ]
+                </p>
+
+                <h1>ARCADE <span>ZONE</span></h1>
+
+                <p>Выберите игру и испытайте свою удачу!</p>
+
+            </section>
+
+            <!-- Игра MEMORY -->
+            <section class="game-section">
+
+                <div class="game-heading">
+                    <span class="module-code">MODULE_01</span>
+                    <h2>MEMORY<span>.exe</span></h2>
+                    <p>Найдите все одинаковые пары символов.</p>
+                </div>
+
+                <!-- Здесь появятся игровые карточки -->
+                <div class="memory-game" id="memory-game"></div>
+
+                <p class="game-message" id="memory-message">
+                    СИСТЕМА ОЖИДАЕТ ВАШИХ ДЕЙСТВИЙ...
+                </p>
+
+                <button class="game-button" id="restart-memory">
+                    ПЕРЕЗАПУСТИТЬ ИГРУ
+                </button>
+
+            </section>
+
+            <!-- Разделитель -->
+            <div class="section-divider">
+                <span>✦ ✦ ✦</span>
+            </div>
+
+            <!-- Колесо предсказаний -->
+            <section class="game-section">
+
+                <div class="game-heading">
+                    <span class="module-code">MODULE_02</span>
+                    <h2>FIRE <span>WHEEL</span></h2>
+                    <p>Пусть Огненная Коза выберет Вашу судьбу!</p>
+                </div>
+
+                <div class="wheel-container">
+
+                    <!-- Указатель колеса -->
+                    <div class="wheel-pointer"></div>
+
+                    <!-- Само колесо -->
+                    <div class="wheel" id="wheel">
+                        <span>★</span>
+                    </div>
+
+                </div>
+
+                <button class="game-button" id="spin-wheel">
+                    КРУТИТЬ КОЛЕСО
+                </button>
+
+                <p class="game-message" id="wheel-message">
+                    ОЖИДАНИЕ РЕЗУЛЬТАТА...
+                </p>
+
+            </section>
+
+        </main>
+
+        <!-- Подвал -->
+        <footer class="footer">
+            <p>CYBER GOAT 2027 © ALL RIGHTS RESERVED</p>
+            <p>POWERED BY FIRE AND NEW YEAR MAGIC</p>
+        </footer>
+
+    </div>
+
+    <!-- Подключаем JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

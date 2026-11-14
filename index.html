@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CYBER GOAT 2027</title>
+
+    <!-- Подключаем таблицу стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Новогодний снегопад -->
+<div class="snowfall" aria-hidden="true"></div>
+
+    <!-- Основная оболочка сайта -->
+    <div class="site-wrapper">
+
+        <!-- Шапка сайта -->
+        <header class="header">
+            <!-- Новогодняя гирлянда -->
+<div class="christmas-garland" aria-hidden="true">
+
+    <svg viewBox="0 0 1000 110" preserveAspectRatio="none">
+
+        <!-- Провод с большими дугами -->
+        <path
+            d="M0 5
+               Q125 100 250 5
+               Q375 100 500 5
+               Q625 100 750 5
+               Q875 100 1000 5"
+            fill="none"
+            stroke="#76202D"
+            stroke-width="3"
+        />
+
+        <!-- Маленькие подвесы -->
+        <g stroke="#76202D" stroke-width="2">
+            <path d="M125 52 V67"/>
+            <path d="M375 52 V67"/>
+            <path d="M625 52 V67"/>
+            <path d="M875 52 V67"/>
+        </g>
+
+        <!-- Лампочки -->
+        <g class="garland-bulbs">
+            <circle cx="125" cy="72" r="6" fill="#FFD16A"/>
+            <circle cx="375" cy="72" r="6" fill="#F04432"/>
+            <circle cx="625" cy="72" r="6" fill="#FF8738"/>
+            <circle cx="875" cy="72" r="6" fill="#FFD16A"/>
+        </g>
+
+    </svg>
+</div>
+
+          <a href="index.html" class="logo">
+    <span class="santa-hat" aria-hidden="true">
+        <span class="hat-pom"></span>
+    </span>
+    CYBER GOAT <span>2027</span>
+</a>
+
+            <!-- Навигация -->
+            <nav class="navigation">
+                <a href="index.html" class="active">ГЛАВНАЯ</a>
+                <a href="game.html">ИГРЫ</a>
+                <a href="quiz.html">ВИКТОРИНА</a>
+            </nav>
+
+            <div class="system-status">
+                ● SYSTEM ONLINE
+            </div>
+
+        </header>
+
+        <!-- Главный экран -->
+        <main>
+
+            <section class="hero">
+
+                <div class="hero-content">
+
+                    <p class="eyebrow">
+                        [ NEW YEAR PROTOCOL ACTIVATED ]
+                    </p>
+
+                    <h1>
+                        WELCOME TO
+                        <span>2027</span>
+                    </h1>
+
+                    <h2>ГОД ОГНЕННОЙ КОЗЫ</h2>
+
+                    <p class="hero-description">
+                        Новогодняя система запущена.
+                        Вас ждут огонь, удача и немного цифрового безумия.
+                    </p>
+
+                    <a href="game.html" class="main-button">
+                        НАЧАТЬ ПРИКЛЮЧЕНИЕ →
+                    </a>
+
+                </div>
+
+                <!-- Декоративный символ -->
+                <div class="hero-symbol">
+                    <div class="symbol-glow"></div>
+                    <span>🐐</span>
+                    <p>FIRE GOAT</p>
+                </div>
+
+            </section>
+
+            <!-- Обратный отсчёт -->
+            <section class="countdown-section">
+
+                <p class="section-label">
+                    [ TIME UNTIL NEW YEAR ]
+                </p>
+
+                <h2>ДО 2027 ОСТАЛОСЬ</h2>
+
+                <div class="countdown" id="countdown">
+
+                    <div class="time-card">
+                        <span id="days">000</span>
+                        <small>ДНЕЙ</small>
+                    </div>
+
+                    <div class="time-card">
+                        <span id="hours">00</span>
+                        <small>ЧАСОВ</small>
+                    </div>
+
+                    <div class="time-card">
+                        <span id="minutes">00</span>
+                        <small>МИНУТ</small>
+                    </div>
+
+                    <div class="time-card">
+                        <span id="seconds">00</span>
+                        <small>СЕКУНД</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Разделитель -->
+            <div class="section-divider">
+                <span>✦ ✦ ✦</span>
+            </div>
+
+            <!-- Карточки разделов -->
+            <section class="modules-section">
+
+                <p class="section-label">
+                    [ SELECT YOUR DESTINATION ]
+                </p>
+
+                <h2>ВЫБЕРИТЕ МОДУЛЬ</h2>
+
+                <div class="modules-grid">
+
+                    <article class="module-card">
+                        <span class="module-icon">🎮</span>
+                        <p class="module-code">MODULE_01</p>
+                        <h3>MEMORY.exe</h3>
+                        <p>Проверьте свою память в новогодней игре.</p>
+                        <a href="game.html">ОТКРЫТЬ →</a>
+                    </article>
+
+                    <article class="module-card">
+                        <span class="module-icon">🎡</span>
+                        <p class="module-code">MODULE_02</p>
+                        <h3>FIRE WHEEL</h3>
+                        <p>Испытайте удачу и получите cвоё предсказание.</p>
+                        <a href="game.html">ОТКРЫТЬ →</a>
+                    </article>
+
+                    <article class="module-card">
+                        <span class="module-icon">🐐</span>
+                        <p class="module-code">MODULE_03</p>
+                        <h3>NEW YEAR QUIZ</h3>
+                        <p>Ответьте на вопросы и заслужите свой титул.</p>
+                        <a href="quiz.html">ОТКРЫТЬ →</a>
+                    </article>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- Подвал -->
+        <footer class="footer">
+            <p>CYBER GOAT 2027 © ALL RIGHTS RESERVED</p>
+            <p>POWERED BY FIRE AND NEW YEAR MAGIC</p>
+        </footer>
+
+    </div>
+
+    <!-- Подключаем JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
