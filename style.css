@@ -1581,3 +1581,154 @@ html {
         padding-top: 56px;
     }
 }
+/* Кнопка перехода внизу страницы */
+.cta-section {
+    text-align: center;
+    padding: 30px 0 10px;
+}
+
+.cta-section .main-button {
+    padding: 18px 34px;
+    font-size: 13px;
+}
+
+/* =================================
+   HERO + COUNTDOWN
+================================= */
+
+/* Общая композиция главного экрана */
+.hero-countdown {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 2.2fr) 1fr;
+    align-items: center;
+    gap: 15px;
+
+    width: 100%;
+    padding: 45px 20px;
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+/* Центральная часть */
+.hero-center {
+    min-width: 0;
+}
+
+/* Главный заголовок */
+.hero-center h1 {
+    margin: 15px 0 8px;
+    color: #F5E6D0;
+    font-size: clamp(30px, 4vw, 52px);
+    line-height: 1.1;
+}
+
+.hero-center h1 span {
+    display: block;
+    color: #F04432;
+}
+
+/* Подзаголовок */
+.hero-center h2 {
+    color: #FFD16A;
+    margin: 12px 0;
+}
+
+/* Описание */
+.hero-center .hero-description {
+    color: #D9C5B9;
+    line-height: 1.7;
+    margin: 15px auto 25px;
+    max-width: 500px;
+}
+
+/* Козочки по бокам */
+.hero-goat {
+    font-size: clamp(55px, 8vw, 110px);
+    filter: drop-shadow(0 0 15px rgba(216, 59, 46, 0.65));
+    animation: goat-glow 2s infinite alternate;
+}
+
+.goat-left,
+.goat-right {
+    transform: none;
+}
+
+/* Свечение козочек */
+@keyframes goat-glow {
+    from {
+        filter: drop-shadow(0 0 7px rgba(216, 59, 46, 0.35));
+    }
+
+    to {
+        filter: drop-shadow(0 0 20px rgba(255, 135, 56, 0.8));
+    }
+}
+
+/* Таймер внутри главного экрана */
+.hero-center .countdown-section {
+    margin-top: 30px;
+    padding: 0;
+    text-align: center;
+}
+
+/* Адаптация для телефонов */
+@media (max-width: 650px) {
+
+    .hero-countdown {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 30px 10px;
+    }
+
+    .hero-center {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+
+    .hero-goat {
+        font-size: 55px;
+    }
+
+    .goat-left {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .goat-right {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+}
+
+.hero-center .countdown {
+    display: grid !important;
+    grid-template-columns: repeat(2, 100px);
+    column-gap: 14px !important;
+    row-gap: 14px !important;
+
+    width: max-content;
+    margin: 20px auto 0;
+    padding: 5px;
+}
+
+.hero-center .time-card {
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-goat img {
+    display: block;
+    width: 100%;
+    max-width: 190px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(216, 59, 46, 0.45));
+}

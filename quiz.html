@@ -32,18 +32,51 @@
 
     <div class="site-wrapper">
 
-        <!-- Шапка сайта -->
-        <header class="header">
+       <header class="header">
 
+            <!-- Новогодняя гирлянда -->
+            <div class="christmas-garland" aria-hidden="true">
+
+                <svg viewBox="0 0 1000 110" preserveAspectRatio="none">
+
+                    <!-- Провод с большими дугами -->
+                    <path
+                        d="M0 5
+                           Q125 100 250 5
+                           Q375 100 500 5
+                           Q625 100 750 5
+                           Q875 100 1000 5"
+                        fill="none"
+                        stroke="#76202D"
+                        stroke-width="3"
+                    />
+
+                    <!-- Маленькие подвесы -->
+                    <g stroke="#76202D" stroke-width="2">
+                        <path d="M125 52 V67"/>
+                        <path d="M375 52 V67"/>
+                        <path d="M625 52 V67"/>
+                        <path d="M875 52 V67"/>
+                    </g>
+
+                    <!-- Лампочки -->
+                    <g class="garland-bulbs">
+                        <circle cx="125" cy="72" r="6" fill="#FFD16A"/>
+                        <circle cx="375" cy="72" r="6" fill="#F04432"/>
+                        <circle cx="625" cy="72" r="6" fill="#FF8738"/>
+                        <circle cx="875" cy="72" r="6" fill="#FFD16A"/>
+                    </g>
+
+                </svg>
+            </div>
+
+            <!-- Логотип с новогодней шапкой -->
             <a href="index.html" class="logo">
+                <span class="santa-hat" aria-hidden="true">
+                    <span class="hat-pom"></span>
+                </span>
                 CYBER GOAT <span>2027</span>
             </a>
-
-            <nav class="navigation" aria-label="Основная навигация">
-                <a href="index.html">ГЛАВНАЯ</a>
-                <a href="game.html">ИГРЫ</a>
-                <a href="quiz.html" class="active" aria-current="page">ВИКТОРИНА</a>
-            </nav>
 
             <div class="system-status">
                 ● SYSTEM ONLINE
@@ -164,7 +197,14 @@
                 </button>
 
             </section>
+<!-- Кнопка возврата на главную -->
+            <section class="cta-section">
 
+                <a href="index.html" class="main-button">
+                    ← НА ГЛАВНУЮ
+                </a>
+
+            </section>
         </main>
 
         <!-- Подвал -->

@@ -35,8 +35,8 @@
     <!-- Основная оболочка сайта -->
     <div class="site-wrapper">
 
-        <!-- Шапка сайта -->
-        <header class="header">
+       <header class="header">
+
             <!-- Новогодняя гирлянда -->
             <div class="christmas-garland" aria-hidden="true">
 
@@ -73,19 +73,13 @@
                 </svg>
             </div>
 
+            <!-- Логотип с новогодней шапкой -->
             <a href="index.html" class="logo">
                 <span class="santa-hat" aria-hidden="true">
                     <span class="hat-pom"></span>
                 </span>
                 CYBER GOAT <span>2027</span>
             </a>
-
-            <!-- Навигация -->
-            <nav class="navigation" aria-label="Основная навигация">
-                <a href="index.html" class="active" aria-current="page">ГЛАВНАЯ</a>
-                <a href="game.html">ИГРЫ</a>
-                <a href="quiz.html">ВИКТОРИНА</a>
-            </nav>
 
             <div class="system-status">
                 ● SYSTEM ONLINE
@@ -96,75 +90,76 @@
         <!-- Главный экран -->
         <main id="main">
 
-            <section class="hero">
+           <!-- Главный экран с центральным таймером -->
+<section class="hero-countdown">
 
-                <div class="hero-content">
+    <!-- Левая козочка -->
+    <div class="hero-goat goat-left">
+    <img src="assets/goat-left.png" alt="">
+</div>
 
-                    <p class="eyebrow">
-                        [ NEW YEAR PROTOCOL ACTIVATED ]
-                    </p>
+    <!-- Центральная часть -->
+    <div class="hero-center">
 
-                    <h1>
-                        WELCOME TO
-                        <span>2027</span>
-                    </h1>
+        <p class="eyebrow">
+            [ NEW YEAR PROTOCOL ACTIVATED ]
+        </p>
 
-                    <h2>ГОД ОГНЕННОЙ КОЗЫ</h2>
+        <h1>
+            WELCOME TO
+            <span>2027</span>
+        </h1>
 
-                    <p class="hero-description">
-                        Новогодняя система запущена.
-                        Вас ждут огонь, удача и немного цифрового безумия.
-                    </p>
+        <h2>ГОД ОГНЕННОЙ КОЗЫ</h2>
 
-                    <a href="game.html" class="main-button">
-                        НАЧАТЬ ПРИКЛЮЧЕНИЕ →
-                    </a>
+        <p class="hero-description">
+            Новогодняя система запущена.
+            Вас ждут огонь, удача и немного цифрового безумия.
+        </p>
 
+        <!-- Обратный отсчёт -->
+        <div class="countdown-section">
+
+            <p class="section-label">
+                [ TIME UNTIL NEW YEAR ]
+            </p>
+
+            <h2 id="countdown-title">ДО 2027 ОСТАЛОСЬ</h2>
+
+            <div class="countdown" id="countdown" role="timer" aria-label="Время до Нового года">
+
+                <div class="time-card">
+                    <span id="days">00</span>
+                    <small>ДНЕЙ</small>
                 </div>
 
-                <!-- Декоративный символ -->
-                <div class="hero-symbol">
-                    <div class="symbol-glow"></div>
-                    <span aria-hidden="true">🐐</span>
-                    <p>FIRE GOAT</p>
+                <div class="time-card">
+                    <span id="hours">00</span>
+                    <small>ЧАСОВ</small>
                 </div>
 
-            </section>
-
-            <!-- Обратный отсчёт -->
-            <section class="countdown-section">
-
-                <p class="section-label">
-                    [ TIME UNTIL NEW YEAR ]
-                </p>
-
-                <h2 id="countdown-title">ДО 2027 ОСТАЛОСЬ</h2>
-
-                <div class="countdown" id="countdown" role="timer" aria-label="Время до Нового года">
-
-                    <div class="time-card">
-                        <span id="days">00</span>
-                        <small>ДНЕЙ</small>
-                    </div>
-
-                    <div class="time-card">
-                        <span id="hours">00</span>
-                        <small>ЧАСОВ</small>
-                    </div>
-
-                    <div class="time-card">
-                        <span id="minutes">00</span>
-                        <small>МИНУТ</small>
-                    </div>
-
-                    <div class="time-card">
-                        <span id="seconds">00</span>
-                        <small>СЕКУНД</small>
-                    </div>
-
+                <div class="time-card">
+                    <span id="minutes">00</span>
+                    <small>МИНУТ</small>
                 </div>
 
-            </section>
+                <div class="time-card">
+                    <span id="seconds">00</span>
+                    <small>СЕКУНД</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Правая козочка -->
+    <div class="hero-goat goat-right">
+    <img src="assets/goat-right.png" alt="">
+</div>
+
+</section>
 
             <!-- Разделитель -->
             <div class="section-divider">
@@ -206,45 +201,18 @@
                 <span>✦ ✦ ✦</span>
             </div>
 
-            <!-- Карточки разделов -->
-            <section class="modules-section">
+            <!-- Кнопка перехода к играм -->
+            <section class="cta-section">
 
                 <p class="section-label">
-                    [ SELECT YOUR DESTINATION ]
+                    [ READY TO PLAY? ]
                 </p>
 
-                <h2>ВЫБЕРИТЕ МОДУЛЬ</h2>
-
-                <div class="modules-grid">
-
-                    <article class="module-card">
-                        <span class="module-icon" aria-hidden="true">🎮</span>
-                        <p class="module-code">MODULE_01</p>
-                        <h3>MEMORY.exe</h3>
-                        <p>Проверьте свою память в новогодней игре.</p>
-                        <a href="game.html#memory">ОТКРЫТЬ →</a>
-                    </article>
-
-                    <article class="module-card">
-                        <span class="module-icon" aria-hidden="true">🎡</span>
-                        <p class="module-code">MODULE_02</p>
-                        <h3>FIRE WHEEL</h3>
-                        <p>Испытайте удачу и получите своё предсказание.</p>
-                        <a href="game.html#fortune">ОТКРЫТЬ →</a>
-                    </article>
-
-                    <article class="module-card">
-                        <span class="module-icon" aria-hidden="true">🐐</span>
-                        <p class="module-code">MODULE_03</p>
-                        <h3>NEW YEAR QUIZ</h3>
-                        <p>Ответьте на вопросы и заслужите свой титул.</p>
-                        <a href="quiz.html">ОТКРЫТЬ →</a>
-                    </article>
-
-                </div>
+                <a href="game.html" class="main-button">
+                    НАЧАТЬ ПРИКЛЮЧЕНИЕ →
+                </a>
 
             </section>
-
         </main>
 
         <!-- Подвал -->
