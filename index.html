@@ -6,14 +6,31 @@
 
     <title>CYBER GOAT 2027</title>
 
+    <!-- Описание для поисковиков и превью ссылки -->
+    <meta name="description" content="Новогодний сайт к году Огненной Козы 2027: обратный отсчёт, игра на память, колесо предсказаний и викторина.">
+    <meta name="theme-color" content="#100B0D">
+    <meta property="og:title" content="CYBER GOAT 2027">
+    <meta property="og:description" content="Год Огненной Козы уже близко: играйте, отвечайте на вопросы и узнавайте будущее.">
+    <meta property="og:type" content="website">
+
+    <!-- Иконка вкладки -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐐</text></svg>">
+
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
     <!-- Подключаем таблицу стилей -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
     <!-- Новогодний снегопад -->
-<div class="snowfall" aria-hidden="true"></div>
+    <div class="snowfall" aria-hidden="true"></div>
 
     <!-- Основная оболочка сайта -->
     <div class="site-wrapper">
@@ -21,51 +38,51 @@
         <!-- Шапка сайта -->
         <header class="header">
             <!-- Новогодняя гирлянда -->
-<div class="christmas-garland" aria-hidden="true">
+            <div class="christmas-garland" aria-hidden="true">
 
-    <svg viewBox="0 0 1000 110" preserveAspectRatio="none">
+                <svg viewBox="0 0 1000 110" preserveAspectRatio="none">
 
-        <!-- Провод с большими дугами -->
-        <path
-            d="M0 5
-               Q125 100 250 5
-               Q375 100 500 5
-               Q625 100 750 5
-               Q875 100 1000 5"
-            fill="none"
-            stroke="#76202D"
-            stroke-width="3"
-        />
+                    <!-- Провод с большими дугами -->
+                    <path
+                        d="M0 5
+                           Q125 100 250 5
+                           Q375 100 500 5
+                           Q625 100 750 5
+                           Q875 100 1000 5"
+                        fill="none"
+                        stroke="#76202D"
+                        stroke-width="3"
+                    />
 
-        <!-- Маленькие подвесы -->
-        <g stroke="#76202D" stroke-width="2">
-            <path d="M125 52 V67"/>
-            <path d="M375 52 V67"/>
-            <path d="M625 52 V67"/>
-            <path d="M875 52 V67"/>
-        </g>
+                    <!-- Маленькие подвесы -->
+                    <g stroke="#76202D" stroke-width="2">
+                        <path d="M125 52 V67"/>
+                        <path d="M375 52 V67"/>
+                        <path d="M625 52 V67"/>
+                        <path d="M875 52 V67"/>
+                    </g>
 
-        <!-- Лампочки -->
-        <g class="garland-bulbs">
-            <circle cx="125" cy="72" r="6" fill="#FFD16A"/>
-            <circle cx="375" cy="72" r="6" fill="#F04432"/>
-            <circle cx="625" cy="72" r="6" fill="#FF8738"/>
-            <circle cx="875" cy="72" r="6" fill="#FFD16A"/>
-        </g>
+                    <!-- Лампочки -->
+                    <g class="garland-bulbs">
+                        <circle cx="125" cy="72" r="6" fill="#FFD16A"/>
+                        <circle cx="375" cy="72" r="6" fill="#F04432"/>
+                        <circle cx="625" cy="72" r="6" fill="#FF8738"/>
+                        <circle cx="875" cy="72" r="6" fill="#FFD16A"/>
+                    </g>
 
-    </svg>
-</div>
+                </svg>
+            </div>
 
-          <a href="index.html" class="logo">
-    <span class="santa-hat" aria-hidden="true">
-        <span class="hat-pom"></span>
-    </span>
-    CYBER GOAT <span>2027</span>
-</a>
+            <a href="index.html" class="logo">
+                <span class="santa-hat" aria-hidden="true">
+                    <span class="hat-pom"></span>
+                </span>
+                CYBER GOAT <span>2027</span>
+            </a>
 
             <!-- Навигация -->
-            <nav class="navigation">
-                <a href="index.html" class="active">ГЛАВНАЯ</a>
+            <nav class="navigation" aria-label="Основная навигация">
+                <a href="index.html" class="active" aria-current="page">ГЛАВНАЯ</a>
                 <a href="game.html">ИГРЫ</a>
                 <a href="quiz.html">ВИКТОРИНА</a>
             </nav>
@@ -77,7 +94,7 @@
         </header>
 
         <!-- Главный экран -->
-        <main>
+        <main id="main">
 
             <section class="hero">
 
@@ -108,7 +125,7 @@
                 <!-- Декоративный символ -->
                 <div class="hero-symbol">
                     <div class="symbol-glow"></div>
-                    <span>🐐</span>
+                    <span aria-hidden="true">🐐</span>
                     <p>FIRE GOAT</p>
                 </div>
 
@@ -121,12 +138,12 @@
                     [ TIME UNTIL NEW YEAR ]
                 </p>
 
-                <h2>ДО 2027 ОСТАЛОСЬ</h2>
+                <h2 id="countdown-title">ДО 2027 ОСТАЛОСЬ</h2>
 
-                <div class="countdown" id="countdown">
+                <div class="countdown" id="countdown" role="timer" aria-label="Время до Нового года">
 
                     <div class="time-card">
-                        <span id="days">000</span>
+                        <span id="days">00</span>
                         <small>ДНЕЙ</small>
                     </div>
 
@@ -154,6 +171,41 @@
                 <span>✦ ✦ ✦</span>
             </div>
 
+            <!-- Что за год такой -->
+            <section class="year-section">
+
+                <p class="section-label">
+                    [ FIRE GOAT DATABASE ]
+                </p>
+
+                <h2>ЧТО ЗА ГОД ТАКОЙ</h2>
+
+                <div class="facts-grid">
+
+                    <article class="fact-card">
+                        <b>ОГОНЬ</b>
+                        <p>Стихия года. Коза считается мягкой и творческой, а Огонь добавляет ей упрямства и энергии.</p>
+                    </article>
+
+                    <article class="fact-card">
+                        <b>60 ЛЕТ</b>
+                        <p>Такое сочетание повторяется раз в 60 лет. Прошлая Огненная Коза была в 1967-м, следующая будет в 2087-м.</p>
+                    </article>
+
+                    <article class="fact-card">
+                        <b>6 ФЕВРАЛЯ</b>
+                        <p>В этот день год Козы начнётся по восточному календарю. До него ещё идёт год Огненной Лошади.</p>
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- Разделитель -->
+            <div class="section-divider">
+                <span>✦ ✦ ✦</span>
+            </div>
+
             <!-- Карточки разделов -->
             <section class="modules-section">
 
@@ -166,23 +218,23 @@
                 <div class="modules-grid">
 
                     <article class="module-card">
-                        <span class="module-icon">🎮</span>
+                        <span class="module-icon" aria-hidden="true">🎮</span>
                         <p class="module-code">MODULE_01</p>
                         <h3>MEMORY.exe</h3>
                         <p>Проверьте свою память в новогодней игре.</p>
-                        <a href="game.html">ОТКРЫТЬ →</a>
+                        <a href="game.html#memory">ОТКРЫТЬ →</a>
                     </article>
 
                     <article class="module-card">
-                        <span class="module-icon">🎡</span>
+                        <span class="module-icon" aria-hidden="true">🎡</span>
                         <p class="module-code">MODULE_02</p>
                         <h3>FIRE WHEEL</h3>
-                        <p>Испытайте удачу и получите cвоё предсказание.</p>
-                        <a href="game.html">ОТКРЫТЬ →</a>
+                        <p>Испытайте удачу и получите своё предсказание.</p>
+                        <a href="game.html#fortune">ОТКРЫТЬ →</a>
                     </article>
 
                     <article class="module-card">
-                        <span class="module-icon">🐐</span>
+                        <span class="module-icon" aria-hidden="true">🐐</span>
                         <p class="module-code">MODULE_03</p>
                         <h3>NEW YEAR QUIZ</h3>
                         <p>Ответьте на вопросы и заслужите свой титул.</p>

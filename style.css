@@ -92,7 +92,7 @@ body {
 /* Статус системы */
 .system-status {
     color: #FF8738;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 1px;
 }
 
@@ -103,7 +103,7 @@ body {
     border-top: 1px solid var(--burgundy);
     text-align: center;
     color: #A78C84;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 1px;
     line-height: 2;
 }
@@ -256,7 +256,7 @@ body {
 .time-card small {
     display: block;
     color: var(--amber);
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 2px;
     margin-top: 8px;
 }
@@ -321,7 +321,7 @@ body {
 
 .module-code {
     color: var(--amber);
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 2px;
 }
 
@@ -406,7 +406,7 @@ body {
 /* Поле игры MEMORY */
 .memory-game {
     display: grid;
-    grid-template-columns: repeat(4, minmax(65px, 100px));
+    grid-template-columns: repeat(4, minmax(0, 100px));
     justify-content: center;
     gap: 12px;
     margin: 30px auto;
@@ -507,7 +507,7 @@ body {
     transition: transform 4s cubic-bezier(0.12, 0.65, 0.15, 1);
 }
 
-.wheel span {
+.wheel-center {
     color: white;
     font-size: 55px;
     text-shadow: 0 2px 8px #351018;
@@ -907,27 +907,22 @@ body.system-glitch .time-card {
     0% {
         opacity: 1;
         transform: translateX(0);
-        content: "SIGNAL LOST";
     }
     25% {
         opacity: 0.4;
         transform: translateX(-5px);
-        content: "ERROR 404";
     }
     50% {
         opacity: 1;
         transform: translateX(3px);
-        content: "UNKNOWN ENTITY";
     }
     75% {
         opacity: 0.6;
         transform: translateX(-2px);
-        content: "CORRUPTED";
     }
     100% {
         opacity: 1;
         transform: translateX(0);
-        content: "SIGNAL LOST";
     }
 }
 
@@ -947,8 +942,7 @@ body.system-glitch .time-card {
     }
     75% {
         transform: translateX(2px);
-        text-shadow: -3px 0 var(-
--gold), 3px 0 var(--flame);
+        text-shadow: -3px 0 var(--gold), 3px 0 var(--flame);
     }
     100% {
         transform: translateX(0);
@@ -1260,7 +1254,7 @@ body.system-glitch .time-card {
     width: 29px;
     height: 23px;
     top: -19px;
-    left: 220px;
+    right: -12px;
     background: #D83B2E;
     border-radius: 80% 15% 10% 10%;
     transform: rotate(15deg);
@@ -1346,3 +1340,244 @@ body.system-glitch .time-card {
     }
 }
 
+
+/* ==========================================
+   УЛУЧШЕНИЯ
+========================================== */
+
+/* Шрифты: основной и «терминальный» для подписей */
+body {
+    font-family: "Exo 2", Arial, sans-serif;
+}
+
+button {
+    font-family: inherit;
+}
+
+.eyebrow,
+.section-label,
+.module-code,
+.system-status,
+.page-heading p:first-child,
+#quiz-progress,
+#prediction-status,
+.footer,
+.time-card small,
+.game-message,
+.memory-stats,
+.quiz-best {
+    font-family: "JetBrains Mono", Consolas, monospace;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Видимая рамка при навигации с клавиатуры */
+:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+/* Ссылка «перейти к содержимому» для клавиатуры */
+.skip-link {
+    position: absolute;
+    left: 12px;
+    top: -70px;
+    z-index: 20000;
+    padding: 10px 16px;
+    background: var(--gold);
+    color: var(--obsidian);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 12px;
+}
+
+/* Блок «Что за год такой» */
+.year-section {
+    text-align: center;
+    padding: 30px 0 20px;
+}
+
+.year-section h2 {
+    font-size: 27px;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: left;
+}
+
+.fact-card {
+    padding: 26px 22px;
+    background: linear-gradient(145deg, #241015, #160D10);
+    border: 1px solid var(--burgundy);
+}
+
+.fact-card b {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--gold);
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.fact-card p {
+    color: #C8B5AC;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Якоря игр на странице */
+.game-section {
+    scroll-margin-top: 20px;
+}
+
+/* Статистика memory */
+.memory-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 28px;
+    color: var(--amber);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.memory-stats b {
+    color: var(--gold);
+    font-size: 15px;
+}
+
+.memory-card.open {
+    background: #501923;
+    border-color: var(--amber);
+    animation: card-pop 0.25s ease;
+}
+
+@keyframes card-pop {
+    from { transform: scale(0.85); }
+    to { transform: scale(1); }
+}
+
+.memory-game.won {
+    animation: win-glow 1.2s ease 2;
+}
+
+@keyframes win-glow {
+    50% { filter: drop-shadow(0 0 18px rgba(255, 209, 106, 0.6)); }
+}
+
+/* Иконки на секторах колеса */
+.wheel {
+    position: relative;
+    --wheel-radius: min(98px, 26vw);
+}
+
+.wheel-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: clamp(22px, 7vw, 30px);
+    line-height: 1;
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateY(calc(-1 * var(--wheel-radius)));
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.6));
+}
+
+/* Полоса прогресса викторины и лучший результат */
+.quiz-bar {
+    max-width: 750px;
+    height: 6px;
+    margin: 0 auto 25px;
+    background: #351018;
+    border: 1px solid var(--burgundy);
+}
+
+.quiz-bar span {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, var(--fire), var(--gold));
+    transition: width 0.4s;
+}
+
+.quiz-best {
+    margin-top: 18px;
+    text-align: center;
+    color: var(--amber);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* Кнопка «пропустить» на экране взлома */
+.hack-skip {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 30;
+    padding: 10px 16px;
+    background: #100B0D;
+    color: var(--cream);
+    border: 1px solid var(--amber);
+    font-family: "JetBrains Mono", Consolas, monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.hack-skip:hover {
+    background: var(--amber);
+    color: var(--obsidian);
+}
+
+@media (max-width: 800px) {
+    .facts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Для тех, кому вредны мигания и движение */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .snowfall {
+        display: none;
+    }
+}
+
+/* Гирлянда висит над шапкой и не перечёркивает логотип и меню */
+.header:has(.christmas-garland) {
+    padding-top: 62px;
+}
+
+.christmas-garland {
+    top: 0;
+    height: 56px;
+}
+
+.santa-hat {
+    top: -17px;
+}
+
+@media (max-width: 800px) {
+    .header:has(.christmas-garland) {
+        padding-top: 56px;
+    }
+}

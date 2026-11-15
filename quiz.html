@@ -7,14 +7,28 @@
 
     <title>QUIZ — CYBER GOAT 2027</title>
 
+    <meta name="description" content="Новогодняя викторина про год Огненной Козы и праздничные традиции. Пять случайных вопросов и секретное предсказание в конце.">
+    <meta name="theme-color" content="#100B0D">
+    <meta property="og:title" content="QUIZ — CYBER GOAT 2027">
+    <meta property="og:description" content="Ответьте на вопросы, получите звание и откройте секретное предсказание.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐐</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
     <!-- Подключаем общие стили -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
     <!-- Новогодний снегопад -->
-<div class="snowfall" aria-hidden="true"></div>
+    <div class="snowfall" aria-hidden="true"></div>
 
     <div class="site-wrapper">
 
@@ -25,10 +39,10 @@
                 CYBER GOAT <span>2027</span>
             </a>
 
-            <nav class="navigation">
+            <nav class="navigation" aria-label="Основная навигация">
                 <a href="index.html">ГЛАВНАЯ</a>
                 <a href="game.html">ИГРЫ</a>
-                <a href="quiz.html" class="active">ВИКТОРИНА</a>
+                <a href="quiz.html" class="active" aria-current="page">ВИКТОРИНА</a>
             </nav>
 
             <div class="system-status">
@@ -37,7 +51,7 @@
 
         </header>
 
-        <main>
+        <main id="main">
 
             <!-- Заголовок страницы -->
             <section class="page-heading">
@@ -64,7 +78,8 @@
                     <h2>НОВОГОДНИЙ <span>ЭКЗАМЕН</span></h2>
 
                     <p>
-                        Всего пять вопросов. Сможете ответить на все?
+                        Пять случайных вопросов из десяти: про год Козы и про новогодние традиции.
+                        Каждый раз набор новый.
                     </p>
 
                 </div>
@@ -76,6 +91,11 @@
                         Вопрос 1 / 5
                     </p>
 
+                    <!-- Полоса прогресса -->
+                    <div class="quiz-bar" aria-hidden="true">
+                        <span id="quiz-bar-fill"></span>
+                    </div>
+
                     <h3 id="question">
                         Загрузка вопроса...
                     </h3>
@@ -84,15 +104,19 @@
                     <div id="answers"></div>
 
                     <!-- Сообщение о правильности ответа -->
-                    <p id="quiz-message"></p>
+                    <p id="quiz-message" aria-live="polite"></p>
 
                     <button
                         class="game-button"
                         id="next-question"
+                        type="button"
                         disabled
                     >
                         СЛЕДУЮЩИЙ ВОПРОС
                     </button>
+
+                    <!-- Лучший результат -->
+                    <p class="quiz-best" id="quiz-best"></p>
 
                 </div>
 
@@ -121,7 +145,7 @@
                 <!-- Экран предсказания -->
                 <div class="prediction-screen" id="prediction-screen">
 
-                    <div class="goat-symbol">
+                    <div class="goat-symbol" aria-hidden="true">
                         🐐
                     </div>
 
@@ -129,13 +153,13 @@
                         SECRET CONNECTION ESTABLISHED
                     </p>
 
-                    <h3 id="prediction-result">
+                    <h3 id="prediction-result" aria-live="polite">
                         ВАШЕ ПРЕДСКАЗАНИЕ ОЖИДАЕТ ВАС...
                     </h3>
 
                 </div>
 
-                <button class="game-button" id="get-prediction">
+                <button class="game-button" id="get-prediction" type="button">
                     ПОЛУЧИТЬ ПРЕДСКАЗАНИЕ
                 </button>
 

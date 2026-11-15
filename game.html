@@ -7,14 +7,28 @@
 
     <title>GAMES — CYBER GOAT 2027</title>
 
+    <meta name="description" content="Новогодние игры: найдите все пары в MEMORY.exe и узнайте предсказание на Огненном колесе.">
+    <meta name="theme-color" content="#100B0D">
+    <meta property="og:title" content="GAMES — CYBER GOAT 2027">
+    <meta property="og:description" content="Игра на память и колесо предсказаний к году Огненной Козы.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐐</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
     <!-- Подключаем общие стили -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
     <!-- Новогодний снегопад -->
-<div class="snowfall" aria-hidden="true"></div>
+    <div class="snowfall" aria-hidden="true"></div>
 
     <div class="site-wrapper">
 
@@ -25,9 +39,9 @@
                 CYBER GOAT <span>2027</span>
             </a>
 
-            <nav class="navigation">
+            <nav class="navigation" aria-label="Основная навигация">
                 <a href="index.html">ГЛАВНАЯ</a>
-                <a href="game.html" class="active">ИГРЫ</a>
+                <a href="game.html" class="active" aria-current="page">ИГРЫ</a>
                 <a href="quiz.html">ВИКТОРИНА</a>
             </nav>
 
@@ -37,7 +51,7 @@
 
         </header>
 
-        <main>
+        <main id="main">
 
             <!-- Заголовок страницы -->
             <section class="page-heading">
@@ -53,22 +67,29 @@
             </section>
 
             <!-- Игра MEMORY -->
-            <section class="game-section">
+            <section class="game-section" id="memory">
 
                 <div class="game-heading">
                     <span class="module-code">MODULE_01</span>
                     <h2>MEMORY<span>.exe</span></h2>
-                    <p>Найдите все одинаковые пары символов.</p>
+                    <p>Найдите все одинаковые пары символов. Чем меньше ходов, тем лучше результат.</p>
+                </div>
+
+                <!-- Ходы, время и рекорд -->
+                <div class="memory-stats">
+                    <span>ХОДЫ: <b id="memory-moves">0</b></span>
+                    <span>ВРЕМЯ: <b id="memory-time">0:00</b></span>
+                    <span>РЕКОРД: <b id="memory-best">—</b></span>
                 </div>
 
                 <!-- Здесь появятся игровые карточки -->
                 <div class="memory-game" id="memory-game"></div>
 
-                <p class="game-message" id="memory-message">
+                <p class="game-message" id="memory-message" aria-live="polite">
                     СИСТЕМА ОЖИДАЕТ ВАШИХ ДЕЙСТВИЙ...
                 </p>
 
-                <button class="game-button" id="restart-memory">
+                <button class="game-button" id="restart-memory" type="button">
                     ПЕРЕЗАПУСТИТЬ ИГРУ
                 </button>
 
@@ -80,7 +101,7 @@
             </div>
 
             <!-- Колесо предсказаний -->
-            <section class="game-section">
+            <section class="game-section" id="fortune">
 
                 <div class="game-heading">
                     <span class="module-code">MODULE_02</span>
@@ -93,18 +114,18 @@
                     <!-- Указатель колеса -->
                     <div class="wheel-pointer"></div>
 
-                    <!-- Само колесо -->
-                    <div class="wheel" id="wheel">
-                        <span>★</span>
+                    <!-- Само колесо: значки на секторах добавляет script.js -->
+                    <div class="wheel" id="wheel" aria-hidden="true">
+                        <span class="wheel-center">★</span>
                     </div>
 
                 </div>
 
-                <button class="game-button" id="spin-wheel">
+                <button class="game-button" id="spin-wheel" type="button">
                     КРУТИТЬ КОЛЕСО
                 </button>
 
-                <p class="game-message" id="wheel-message">
+                <p class="game-message" id="wheel-message" aria-live="polite">
                     ОЖИДАНИЕ РЕЗУЛЬТАТА...
                 </p>
 
