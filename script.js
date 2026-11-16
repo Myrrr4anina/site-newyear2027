@@ -308,7 +308,7 @@ if (memoryGame && memoryMessage && restartMemoryButton) {
 }
 
 /* ==========================================
-   ЧАСТЬ 3. FIRE WHEEL
+   ЧАСТЬ 3. ОГНЕННОЕ КОЛЕСО
 ========================================== */
 
 // Находим элементы колеса
@@ -397,7 +397,7 @@ if (fortuneWheel && spinWheelButton && wheelMessage) {
 }
 
 /* ==========================================
-   ЧАСТЬ 4. NEW YEAR QUIZ
+   ЧАСТЬ 4. КВИЗ
 ========================================== */
 
 // Находим элементы викторины
@@ -565,7 +565,7 @@ if (
 
                     quizScore++;
                     answerButton.classList.add("correct");
-                    quizMessage.textContent = "ПРАВИЛЬНО! Отличная работа! 🔥";
+                    quizMessage.textContent = "ПРАВИЛЬНО,ВЫ МОЛОДЕЦ! Отличная работа! 🔥";
 
                 } else {
 
@@ -611,15 +611,15 @@ if (
         let rewardTitle = "";
 
         if (quizScore === 5) {
-            rewardTitle = "GOLDEN FIRE KEEPER 🏆";
+            rewardTitle = "ВСЕЗНАЮЩАЯ КОЗОЧКА🏆";
         } else if (quizScore >= 3) {
-            rewardTitle = "FRIEND OF FIRE GOAT 🔥";
+            rewardTitle = "КОЗОЧКА С ОПЫТОМ 🔥";
         } else {
-            rewardTitle = "APPRENTICE OF NEW YEAR MAGIC ⭐";
+            rewardTitle = "КОЗОЧКА НА ОБУЧЕНИИ⭐";
         }
 
         quizMessage.textContent =
-            `Ваше звание: ${rewardTitle}`;
+            `Ваш титул: ${rewardTitle}`;
 
         // Запоминаем лучший результат
         if (isNaN(bestScore) || quizScore > bestScore) {
